@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('reservering/', include('reservering.urls')),  # Zorg ervoor dat de reservering URL's worden geladen
-    path('kalender/', include('reservering.urls')),  # Voeg de kalender URL's toe
+    path('admin/', admin.site.urls),  # Admin URL
+    path('reservering/', include('reservering.urls')),  # Reservering app URL's
+    path('kalender/', include('reservering.urls')),  # Kalender app URL's
 ]
