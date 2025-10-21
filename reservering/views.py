@@ -1,15 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ReserveringForm
 
 def reservering_formulier(request):
     if request.method == 'POST':
         form = ReserveringForm(request.POST)
         if form.is_valid():
-            form.save()
-            return render(request, 'bevestiging.html')  # Bevestiging na succesvolle reservering
+            reservering = form.save()  # Sla de reservering op in de database
+            return redirect('bevestiging')  # Redirect naar de bevestigingspagina
     else:
         form = ReserveringForm()
-    return render(request, 'reservering_formulier.html', {'form': form})
 
-def kalender(request):
-    return render(request, 'kalender.html')  # Je kalenderpagina
+    return render(request, 'reservering_formulier.html', {'form': form})
