@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang='nl'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Reservering Formulier</title>
+</head>
+<body>
+    <h1>Vul hieronder je reservering in</h1>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>Verstuur</button>
+    </form>
+</body>
+</html>
+
