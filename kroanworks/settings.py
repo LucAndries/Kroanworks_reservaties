@@ -15,9 +15,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security settings
-SECRET_KEY = 'django-insecure-xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+SECRET_KEY = 'django-insecure-xxxxxxxxxxxxxxxxxxxxxxxxxxxx'  # Zorg ervoor dat je een echte sleutel gebruikt
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kroanworks-reservaties.onrender.com']  # Voeg de juiste hostnamen toe
 
 # Installed apps
 INSTALLED_APPS = [
@@ -98,5 +98,3 @@ STATIC_URL = 'static/'
 
 # Default auto field setting
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
