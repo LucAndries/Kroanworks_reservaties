@@ -11,3 +11,7 @@ def reservering_formulier(request):
         form = ReserveringForm()
 
     return render(request, 'reservering_formulier.html', {'form': form})
+
+
+def bevestiging(request):
+    return render(request, 'bevestiging.html')  # Render het bevestigingstemplate
